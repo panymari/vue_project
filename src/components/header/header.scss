@@ -27,6 +27,9 @@
 
 .angleDownBlock {
   position: relative;
+  &:hover .blocks {
+    display: inline-block;
+  }
 }
 
 .angleDownBlock-blocks {
@@ -35,17 +38,26 @@
 }
 
 .blocks{
+  display: none;
   width: 12rem;
-  height: 3rem;
   font-size: 0.9rem;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0 2rem;
+  padding: 1rem 2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: #393939;
+    cursor: pointer;
+  }
 }
 
 .angleDownBlock-title {
   height: 4rem;
   display: flex;
   align-items: center;
+  padding: 1.8rem;
+  &:hover {
+    cursor: pointer;
+  }
 }
