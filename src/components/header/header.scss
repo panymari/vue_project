@@ -1,0 +1,51 @@
+.header {
+  padding: 0 3rem;
+  height: 4rem;
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-title {
+  font-size: 2rem;
+}
+
+.logo-circle {
+  height: 1rem;
+  width: 1rem;
+  background: red;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.angleDownBlock {
+  position: relative;
+}
+
+.angleDownBlock-blocks {
+  position: absolute;
+  background: black;
+}
+
+.blocks{
+  width: 12rem;
+  height: 3rem;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 2rem;
+}
+
+.angleDownBlock-title {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+}
