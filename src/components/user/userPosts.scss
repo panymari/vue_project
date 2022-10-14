@@ -1,0 +1,31 @@
+.user-posts > div {
+  border: 2px solid #cfc6ff;
+  padding: 20px;
+  border-radius: 0.75rem;
+}
+
+.user-posts > div:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.user-posts {
+  width: 60rem;
+  margin: 2rem auto;
+
+}
+
+.user-posts-item-title {
+  margin-bottom: 0.5rem;
+  font: {
+    size: 20px;
+    weight: 600;
+  }
+}
+
+.user-posts-item-body {
+  color: rgb(110, 110, 110);
+  font: {
+    size: 16px;
+    weight: 400;
+  }
+}

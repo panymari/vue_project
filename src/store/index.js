@@ -1,8 +1,12 @@
 import { createStore } from "vuex";
-import recommendations from './modules/recommendations';
+import recommendations from "@/store/modules/recommendations";
+import users from "@/store/modules/users";
+import posts from "@/store/modules/posts";
 
 export default createStore({
   modules: {
-    recommendations
+    recommendations,
+    posts,
+    users
   }
 });

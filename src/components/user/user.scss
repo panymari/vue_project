@@ -1,0 +1,23 @@
+.name {
+  font: {
+    size: 1.25rem;
+    weight: 600;
+  }
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 10rem;
+  white-space: nowrap;
+}
+
+.userName {
+  margin-top: 0.5rem;
+  font: {
+    size: 1rem;
+    weight: 400;
+  }
+  color: rgb(110, 110, 110);
+}
+
+.userIcon > i {
+  color: #cfc6ff;
+}

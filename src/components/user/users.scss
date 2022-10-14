@@ -1,0 +1,27 @@
+.users {
+  max-width: 1200px;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 5rem auto 0 auto;
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (min-width: 1300px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.userItem {
+  display: flex;
+  justify-content: space-between;
+  background-color: whitesmoke;
+  box-shadow: 0.45rem 0.4rem 0.4rem rgba(196, 196, 196, 0.438);
+  border-radius: 0.75rem;
+  width: 18.75rem;
+  height: 9rem;
+  padding: 1.25rem;
+}

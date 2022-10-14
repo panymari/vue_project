@@ -5,10 +5,11 @@
       <div class="logo-circle"/>
       <span class="logo-title">Innowise group</span>
     </span>
+    <SearchBar />
     <div class="angleDownBlock">
       <div class="angleDownBlock-title">Recommendations</div>
       <div class="angleDownBlock-blocks">
-        <div class="blocks" v-for="item in titleRecommendations" :key="titleRecommendations.id">
+        <div class="blocks" v-for="item in getTitleRecommendations" :key="item.id">
         {{ item.title }}
         </div>
       </div>
@@ -18,16 +19,27 @@
 </template>
 
 <script>
-import {mapGetters, mapActions} from "vuex";
+import SearchBar from "@/ui/SearchBar";
 
 export default {
   name: "Header",
-  computed: mapGetters(["titleRecommendations"]),
-  methods: mapActions(["fetchRecommendations"]),
-  mounted() {
-    this.fetchRecommendations();
-  }
+  components: {SearchBar}
 }
+</script>
+
+<script setup>
+import {useStore} from 'vuex';
+import {computed, onMounted} from "vue";
+
+const store = useStore();
+
+const getTitleRecommendations = computed(() => {
+  return store.getters.getTitleRecommendations
+})
+
+onMounted(() => {
+  store.dispatch("fetchRecommendations");
+})
 </script>
 
 <style scoped lang="scss">

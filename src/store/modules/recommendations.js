@@ -13,20 +13,17 @@ export default {
     },
     mutations: {
         updateRecommendations(state, recommendations) {
-            state.recommendations = recommendations
+            state.recommendations = recommendations;
         },
     },
     state: {
         recommendations: []
     },
     getters: {
-        titleRecommendations(state) {
+        getTitleRecommendations: state => {
             return state.recommendations.filter((item) => {
                 return item.title;
             })
         },
-        allRecommendations(state) {
-            return state.recommendations;
-        }
     }
 }
